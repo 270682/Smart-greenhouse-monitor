@@ -1,1 +1,1 @@
-# Smart-greenhouse-monitor
+# Smart greenhouse monitor
