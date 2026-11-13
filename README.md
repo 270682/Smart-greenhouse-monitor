@@ -62,7 +62,7 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 | `4` | `GP17` | Digitální vstup s interním `PULL_UP` rezistorem |
 | `2` | `GND` | Společná zem |
 
-## Výstupní komponenty
+## Výstupní moduly
 
 ### OLED displej SH1106
 * Monochromatický 1.3" displej s rozlišením 128 × 64 pixelů.
@@ -75,4 +75,26 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 | `GND` | `GND` | Společná zem |
 | `SDA` | `GP4` | Datová linka sběrnice I2C0 |
 | `SCK` | `GP5` | Hodinový signál sběrnice I2C0 |
+
+### Ventilátor 
+* Malý stejnosměrný ventilátor s napájecím napětím 5 V.
+* Zajišťuje odvětrávání skleníku při překročení nastavené horní meze teploty nebo relativní vlhkosti vzduchu.
+
+| Pin modulu | Připojení | Funkce |
+| :---: | :---: | :---: |
+| `VCC (+)` | `NO` (+5 V) | Napájení |
+| `GND` | `GND` | Společná zem |
+
+### Relé modul 
+* Výkonový spínací prvek ventilátoru
+* Řídíci vstup je opticky oddělen 
+
+| Pin modulu | Připojení | Funkce |
+| :---: | :---: | :---: |
+| `VCC` | `VBUS` (+5 V) | Napájení |
+| `GND` | `GND` | Společná zem |
+| `IN` | `GP16` | Řídicí vstup |
+| `NO` | `VBUS` (+5 V) |  |
+| `COM` | `Ventilátor (+)` |  |
+
 
