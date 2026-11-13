@@ -24,8 +24,8 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 | :---: | :---: | :---: |
 | `VCC` | `3V3 (OUT)` | Napájení modulu |
 | `GND` | `GND` | Společná zem |
-| `SDA` | `GP4` | Datová linka sběrnice I2C0 |
-| `SCL` | `GP5` | Hodinový signál sběrnice I2C0 |
+| `SDA` | `GP26` | Datová linka sběrnice I2C1 |
+| `SCL` | `GP27` | Hodinový signál sběrnice I2C1 |
 
 ### Senzor vlhkosti půdy
 * Kapacitní čidlo vlhkosti substrátu s analogovým napěťovým výstupem (`AOUT`) a napájením 3,3 V.
@@ -36,7 +36,7 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 | :---: | :---: | :---: |
 | `VCC` | `3V3(OUT)` | Napájení modulu|
 | `GND` | `GND` | Společná zem |
-| `AOUT` | `GP26` | Analogový výstupní signál (ADC0) |
+| `AOUT` | `GP28` | Analogový výstupní signál (ADC2) |
 
 ### Rotační enkodér (KY-040)
 * Rotační enkodér s neomezeným úhlem otáčení, mechanickou aretací kroků a integrovaným spínacím tlačítkem v ose hřídele.
