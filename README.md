@@ -62,3 +62,17 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 | `4` | `GP17` | Digitální vstup s interním `PULL_UP` rezistorem |
 | `2` | `GND` | Společná zem |
 
+## Výstupní komponenty
+
+### OLED displej SH1106
+* Monochromatický 1.3" displej s rozlišením 128 × 64 pixelů.
+* Komunikace přes sběrnici I2C1.
+* Zobrazuje aktuálně naměřenou teplotu, relativní vlhkost vzduchu a vlhkost půdy. Při překročení limitních hodnot zobrazí upozornění.
+
+| Pin modulu | Odpovídající pin mikrokontroléru | Funkce |
+| :---: | :---: | :---: |
+| `VCC` | `3V3(OUT)` | Napájení displeje (3,3 V) |
+| `GND` | `GND` | Společná zem |
+| `SDA` | `GP4` | Datová linka sběrnice I2C0 |
+| `SCK` | `GP5` | Hodinový signál sběrnice I2C0 |
+
