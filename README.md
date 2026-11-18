@@ -19,7 +19,7 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 
 ### BME280 
 * Integrovaný digitální senzor měřící teplotu, relativní vlhkost vzduchu a barometrický tlak.
-* Modul pracuje s napájecím napětím 3,3 V a komunikuje po sběrnici I2C.
+* Modul pracuje s napájecím napětím 3,3 V a komunikuje po sběrnici I2C1.
 * Průběžně snímá mikroklima (teplotu a relativní vlhkost vzduchu) uvnitř skleníku.
 
 | Pin modulu | Odpovídající pin mikrokontroléru| Funkce |
@@ -66,7 +66,7 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 
 ### OLED displej SH1106
 * Monochromatický 1.3" displej s rozlišením 128 × 64 pixelů.
-* Komunikace přes sběrnici I2C1.
+* Komunikace přes sběrnici I2C0.
 * Zobrazuje aktuálně naměřenou teplotu, relativní vlhkost vzduchu a vlhkost půdy. Při překročení limitních hodnot zobrazí upozornění.
 
 | Pin modulu | Odpovídající pin mikrokontroléru | Funkce |
