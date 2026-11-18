@@ -9,7 +9,7 @@
 
 ## Cíl projektu
 
-Cílem projektu je vytvořit vestavěný systém na platformě **Raspberry Pi Pico W** na rozšiřující vývojové desce DFRobot Gravity: Expansion Board v jazyce **MicroPython** pro automatické sledování a regulaci mikroklimatu ve skleníku. Systém průběžně měří teplotu, relativní vlhkost vzduchu a vlhkost půdy a naměřené hodnoty zobrazuje na OLED displeji.
+Cílem projektu je vytvořit vestavěný systém na platformě **Raspberry Pi Pico W** na rozšiřující vývojové desce DFRobot Gravity: Expansion Board v jazyce **MicroPython** (v1.29.0) pro automatické sledování a regulaci mikroklimatu ve skleníku. Systém průběžně měří teplotu, relativní vlhkost vzduchu a vlhkost půdy a naměřené hodnoty zobrazuje na OLED displeji.
 
 Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální cílové hodnoty všech tří veličin. Při překročení nastavených mezí o definovanou odchylku systém automaticky sepne odvětrávací ventilátor přes relé modul. Prostřednictvím RGB LED se vizuálně signalizuje aktuální „nálada“ rostlin vypočítaná ze změřených parametrů.
 
