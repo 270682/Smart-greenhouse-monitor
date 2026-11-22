@@ -33,7 +33,7 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 * Kapacitní čidlo vlhkosti substrátu s analogovým napěťovým výstupem (`AOUT`) a napájením 3,3 V.
 * Naměřená kapacita je převedena na spojité analogové napětí (čím vyšší vlhkost, tím nižší výstupní napětí), které je mikrokontrolérem převedeno na digitální hodnotu pomocí 12bitového ADC převodníku.
 * Sleduje stav závlahy substrátu. Uživatel je při poklesu upozorněň na zalití.
-*[Odkaz](https://wokwi.com/projects/481414252056190977) na simulaci v online programu Wokwi s testem použitého ovladače 
+* [Odkaz](https://wokwi.com/projects/481414252056190977) na simulaci v online programu Wokwi s testem použitého ovladače 
  
 
 | Pin modulu | Odpovídající pin mikrokontroléru| Funkce |
