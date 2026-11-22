@@ -32,7 +32,9 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 ### Senzor vlhkosti půdy
 * Kapacitní čidlo vlhkosti substrátu s analogovým napěťovým výstupem (`AOUT`) a napájením 3,3 V.
 * Naměřená kapacita je převedena na spojité analogové napětí (čím vyšší vlhkost, tím nižší výstupní napětí), které je mikrokontrolérem převedeno na digitální hodnotu pomocí 12bitového ADC převodníku.
-* Sleduje stav závlahy substrátu. Uživatel je při poklesu upozorněň na zalití. 
+* Sleduje stav závlahy substrátu. Uživatel je při poklesu upozorněň na zalití.
+*[Odkaz](https://wokwi.com/projects/481414252056190977) na simulaci v online programu Wokwi s testem použitého ovladače 
+ 
 
 | Pin modulu | Odpovídající pin mikrokontroléru| Funkce |
 | :---: | :---: | :---: |
@@ -68,7 +70,7 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 * Monochromatický 1.3" displej s rozlišením 128 × 64 pixelů.
 * Komunikace přes sběrnici I2C0.
 * Zobrazuje aktuálně naměřenou teplotu, relativní vlhkost vzduchu a vlhkost půdy. Při překročení limitních hodnot zobrazí upozornění.
-* Odkaz na simulaci v online programu Wokwi s testem použitého ovladače: [https://wokwi.com/projects/481403513555412993](https://wokwi.com/projects/481403513555412993)
+* [Odkaz](https://wokwi.com/projects/481403513555412993) na simulaci v online programu Wokwi s testem použitého ovladače 
 
 | Pin modulu | Odpovídající pin mikrokontroléru | Funkce |
 | :---: | :---: | :---: |
