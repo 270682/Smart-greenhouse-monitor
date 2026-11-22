@@ -91,7 +91,9 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 ### Relé modul 
 * Výkonový spínací prvek ventilátoru
 * Při sepnutí posílá na ventilátor napětí 12 V z externího zdroje
-* Řídíci vstup je opticky oddělen 
+* Řídíci vstup je opticky oddělen
+* [Odkaz](https://wokwi.com/projects/481421928680142849) na simulaci v online programu Wokwi s testem použitého ovladače 
+
 
 | Pin modulu | Připojení | Funkce |
 | :---: | :---: | :---: |
