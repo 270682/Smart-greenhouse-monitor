@@ -68,6 +68,7 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 * Monochromatický 1.3" displej s rozlišením 128 × 64 pixelů.
 * Komunikace přes sběrnici I2C0.
 * Zobrazuje aktuálně naměřenou teplotu, relativní vlhkost vzduchu a vlhkost půdy. Při překročení limitních hodnot zobrazí upozornění.
+* Odkaz na simulaci v online programu Wokwi s testem použitého ovladače: [https://wokwi.com/projects/481403513555412993](https://wokwi.com/projects/481403513555412993)
 
 | Pin modulu | Odpovídající pin mikrokontroléru | Funkce |
 | :---: | :---: | :---: |
