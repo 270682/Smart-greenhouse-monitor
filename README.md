@@ -13,6 +13,8 @@ Cílem projektu je vytvořit vestavěný systém na platformě **Raspberry Pi Pi
 
 Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální cílové hodnoty všech tří veličin. Při překročení nastavených mezí o definovanou odchylku systém automaticky sepne odvětrávací ventilátor přes relé modul. Prostřednictvím RGB LED se vizuálně signalizuje aktuální „nálada“ rostlin vypočítaná ze změřených parametrů.
 
+<img width="2869" height="1733" alt="obrazek" src="https://github.com/user-attachments/assets/f844f850-31c6-4a97-8dba-ec76d1d7c3b1" />
+
 ## Vstupní moduly
 
 ### BME280 
