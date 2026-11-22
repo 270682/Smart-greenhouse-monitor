@@ -4,8 +4,8 @@
 
 ## Členové týmu
 
-- **Daniel Bačovčin**
-- **Jan Rozík**
+- **Daniel Bačovčin**: HW design, SW design 
+- **Jan Rozík**: HW desing, SW design, dokumentace
 
 ## Cíl projektu
 
