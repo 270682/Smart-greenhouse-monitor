@@ -78,16 +78,17 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 | `SCK` | `GP5` | Hodinový signál sběrnice I2C0 |
 
 ### Ventilátor 
-* Malý stejnosměrný ventilátor s napájecím napětím 5 V.
+* Malý stejnosměrný ventilátor s napájecím napětím 12 V.
 * Zajišťuje odvětrávání skleníku při překročení nastavené horní meze teploty nebo relativní vlhkosti vzduchu.
 
 | Pin modulu | Připojení | Funkce |
 | :---: | :---: | :---: |
-| `VCC (+)` | `NO` (+5 V) | Napájení |
+| `VCC (+)` | `NO` (+12 V) | Napájení |
 | `GND` | `GND` | Společná zem |
 
 ### Relé modul 
 * Výkonový spínací prvek ventilátoru
+* Při sepnutí posílá na ventilátor napětí 12 V z externího zdroje
 * Řídíci vstup je opticky oddělen 
 
 | Pin modulu | Připojení | Funkce |
@@ -95,7 +96,7 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 | `VCC` | `VBUS` (+5 V) | Napájení |
 | `GND` | `GND` | Společná zem |
 | `IN` | `GP16` | Řídicí vstup |
-| `NO` | `VBUS` (+5 V) |  |
+| `NO` | `V-ext` (+12 V) |  |
 | `COM` | `Ventilátor (+)` |  |
 
 ### RGB LED (NeoPixel)
