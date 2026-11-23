@@ -116,4 +116,13 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 | `DIN` | `GP22` | Datový vstup |
 | `GND` | `GND` | Společná zem |
 
+| Barva LED | RGB hodnota | Nálada rostlin |
+| :---: | :---: | :---: |
+| **Fialová** | `(220, 0, 255)` | Výpadek komunikace s některým čidlem |
+| **Červená** | `(255, 0, 0)` | Vysoká teplota vzduchu |
+| **Azurová** | `(0, 220, 255)` | Nízká teplota vzduchu |
+| **Oranžová** | `(255, 90, 0)` | Suchá půda nebo vzduch |
+| **Modrá** | `(0, 40, 255)` | Vlhkost půdy nebo vzduchu je nad horním limitem |
+| **Zelená** | `(0, 255, 40)` | Optimální podmínky ve skleníku |
+
 
