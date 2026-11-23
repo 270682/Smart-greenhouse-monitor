@@ -45,7 +45,8 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 ### Rotační enkodér (KY-040)
 * Rotační enkodér s neomezeným úhlem otáčení, mechanickou aretací kroků a integrovaným spínacím tlačítkem v ose hřídele.
 * Při otáčení modul generuje přes piny `CLK` a `DT` dva fázově posunuté obdélníkové signály. Podle pořadí náběžných/sestupných je možné určit směr otáčení.
-* Slouží jako hlavní ovládací prvek uživatelského rozhraní. Dlouhým stiskem tlačítka se volí mezi módem zobrazení a modém nastavovaní ideálních podmínek ve skleníku. Ty se nastavují otačením. 
+* Slouží jako hlavní ovládací prvek uživatelského rozhraní. Dlouhým stiskem tlačítka se volí mezi módem zobrazení a modém nastavovaní ideálních podmínek ve skleníku. Ty se nastavují otačením.
+* [Odkaz](https://wokwi.com/projects/481477403419581441) na simulaci v online programu Wokwi s testem použitého ovladače.
 
 | Pin modulu | Odpovídající pin mikrokontroléru | Funkce |
 | :---: | :---: | :---: |
