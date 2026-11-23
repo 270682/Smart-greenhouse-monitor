@@ -123,16 +123,7 @@ class oled_driver(SH1106_I2C):
 
         self.draw_bar(0, y + 9, self.width, bar_value, minimum, maximum, height=6)
 
-    def show_dashboard(
-        self,
-        temp,
-        humidity,
-        soil_moisture,
-        fan_on,
-        targets=None,
-        tolerances=None,
-        alerts=None,
-    ):
+    def show_dashboard(self, temp, humidity, soil_moisture, fan_on, limits, alerts):
         """
         Display the main greenhouse monitor screen with measured values, tolerance-scaled bars and fan operation indication.
 
@@ -140,28 +131,11 @@ class oled_driver(SH1106_I2C):
         :param humidity: Relative air humidity in % (or None on error).
         :param soil_moisture: Soil moisture in % (or None on error).
         :param fan_on: Boolean indicating whether the fan relay is active.
-        :param targets: Dictionary of target setpoints, e.g. {'temp': 21.0, 'hum': 50.0, 'soil': 50.0}.
-        :param tolerances: Dictionary of allowed +/- tolerances, e.g. {'temp': 2.0, 'hum': 10.0, 'soil': 10.0}.
-        :param alerts: Optional dictionary of alert flags; if None, computed from limits.
+        :param limits: Dictionary of (min, max) tuples, e.g. {'temp': (19.0, 23.0), 'hum': (40.0, 60.0), 'soil': (40.0, 60.0)}.
+        :param alerts: Dictionary of alert flags, e.g. {'temp': False, 'hum': False, 'soil': False}.
         """
         if not self.is_on:
             return
-
-        if targets is None:
-            targets = {"temp": 21.0, "hum": 50.0, "soil": 50.0}
-        if tolerances is None:
-            tolerances = {"temp": 2.0, "hum": 10.0, "soil": 10.0}
-
-        temp_min, temp_max = targets["temp"] - tolerances["temp"], targets["temp"] + tolerances["temp"]
-        hum_min, hum_max = targets["hum"] - tolerances["hum"], targets["hum"] + tolerances["hum"]
-        soil_min, soil_max = targets["soil"] - tolerances["soil"], targets["soil"] + tolerances["soil"]
-
-        if alerts is None:
-            alerts = {
-                "temp": temp is None or temp < temp_min or temp > temp_max,
-                "hum": humidity is None or humidity < hum_min or humidity > hum_max,
-                "soil": soil_moisture is None or soil_moisture < soil_min or soil_moisture > soil_max,
-            }
 
         self.fill(0)
 
@@ -172,9 +146,13 @@ class oled_driver(SH1106_I2C):
 
         self.hline(0, 10, self.width, 1)
 
-        self.draw_measurement("Temp", temp, "C", 13, temp_min, temp_max, alerts.get("temp", False))
-        self.draw_measurement("Humidity", humidity, "%", 30, hum_min, hum_max, alerts.get("hum", False))
-        self.draw_measurement("Soil", soil_moisture, "%", 47, soil_min, soil_max, alerts.get("soil", False))
+        t_min, t_max = limits["temp"]
+        h_min, h_max = limits["hum"]
+        s_min, s_max = limits["soil"]
+
+        self.draw_measurement("Temp", temp, "C", 13, t_min, t_max, alerts.get("temp", False))
+        self.draw_measurement("Humidity", humidity, "%", 30, h_min, h_max, alerts.get("hum", False))
+        self.draw_measurement("Soil", soil_moisture, "%", 47, s_min, s_max, alerts.get("soil", False))
 
         self.show()
 
@@ -216,8 +194,7 @@ def demo():
     i2c0 = I2C(0, sda=Pin(4), scl=Pin(5), freq=400_000)
     display = oled_driver(i2c0)
 
-    targets = {"temp": 21.0, "hum": 50.0, "soil": 50.0}
-    tolerances = {"temp": 2.0, "hum": 10.0, "soil": 10.0}
+    limits = {"temp": (19.0, 23.0), "hum": (40.0, 60.0), "soil": (40.0, 60.0)}
 
     display.contrast(255)
     display.show_boot_screen()
@@ -228,8 +205,8 @@ def demo():
         humidity=50.0,
         soil_moisture=50.0,
         fan_on=False,
-        targets=targets,
-        tolerances=tolerances,
+        limits=limits,
+        alerts={"temp": False, "hum": False, "soil": False},
     )
     time.sleep(3)
 
@@ -238,8 +215,8 @@ def demo():
         humidity=65.0,
         soil_moisture=38.0,
         fan_on=True,
-        targets=targets,
-        tolerances=tolerances,
+        limits=limits,
+        alerts={"temp": True, "hum": True, "soil": True},
     )
     time.sleep(3)
 
