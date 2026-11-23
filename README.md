@@ -108,6 +108,7 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 * Adresovatelná RGB LED s integrovaným řídicím čipem WS2812.
 * Mikrokontrolér posílá po datovém pinu bitový tok s informací o intenzitě jednotlivých složek (24 bitů pro složky G, R, B - tj. 8 bitů pro jednu složku). Integrovaný řadič pomocí PWM modulace nastaví jas jednotlivých složek.
 * Poskytuje vizuální indikaci celkového stavu („nálady“) rostlin ve skleníku
+* [Odkaz](https://wokwi.com/projects/481478909512718337) na simulaci v online programu Wokwi s testem použitého ovladače 
 
 | Pin modulu | Pin na Pico W | Funkce |
 | :---: | :---: | :---: |
