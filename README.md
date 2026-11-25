@@ -129,10 +129,10 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 
 | Knihovna / Modul | Zdroj |
 | :---: | :---: |
-| `sh1106.py` | Výukové materiály předmětu ([micropython-course-labs](https://gitlab.fekt.vut.cz/fryza/micropython-course-labs) |
-| `bme280.py` | Výukové materiály předmětu ([micropython-course-labs](https://gitlab.fekt.vut.cz/fryza/micropython-course-labs) |
-| `adc_read.py` | Výukové materiály předmětu ([micropython-course-labs](https://gitlab.fekt.vut.cz/fryza/micropython-course-labs) |
-| `gpio_devices.py` | Výukové materiály předmětu ([micropython-course-labs](https://gitlab.fekt.vut.cz/fryza/micropython-course-labs) |
+| `sh1106.py` | Výukové materiály předmětu ([micropython-course-labs](https://gitlab.fekt.vut.cz/fryza/micropython-course-labs)) |
+| `bme280.py` | Výukové materiály předmětu ([micropython-course-labs](https://gitlab.fekt.vut.cz/fryza/micropython-course-labs)) |
+| `adc_read.py` | Výukové materiály předmětu ([micropython-course-labs](https://gitlab.fekt.vut.cz/fryza/micropython-course-labs)) |
+| `gpio_devices.py` | Výukové materiály předmětu ([micropython-course-labs](https://gitlab.fekt.vut.cz/fryza/micropython-course-labs)) |
 | `oled_driver.py` | Vlastní implementace (metody `draw_bar()` a `draw_measurement()` převzaty z [micropython-course-labs](https://gitlab.fekt.vut.cz/fryza/micropython-course-labs)) |
 | `soil_moisture_driver.py` | Vlastní implementace |
 | `relay_driver.py` | Vlastní implementace |
