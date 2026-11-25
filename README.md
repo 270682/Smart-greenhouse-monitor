@@ -112,7 +112,7 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 
 | Pin modulu | Pin na Pico W | Funkce |
 | :---: | :---: | :---: |
-| `5V` | `3V3(OUT)` | Napájení LED modulu (5 V) |
+| `5V` | `3V3(OUT)` | Napájení LED modulu |
 | `DIN` | `GP22` | Datový vstup |
 | `GND` | `GND` | Společná zem |
 
