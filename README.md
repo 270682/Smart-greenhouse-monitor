@@ -125,6 +125,16 @@ Uživatel může pomocí rotačního enkodéru v rozhraní nastavovat ideální 
 | **Modrá** | `(0, 40, 255)` | Vlhkost půdy nebo vzduchu je nad horním limitem |
 | **Zelená** | `(0, 255, 40)` | Optimální podmínky ve skleníku |
 
+## Časování úloh
+
+| Úloha / Obsluha | Způsob běhu | Interval / Spouštění | Odpovědnost v systému |
+| :---: | :---: | :---: | :---: |
+| `_on_rotate` | Hardwarové přerušení (`IRQ_FALLING`) | Při sestupné hraně `CLK` (`GP13`) | Určí směr a přičte/odečte krok enkodéru. |
+| `ui_input_task` | `uasyncio` úloha | `50 ms` | Obsluha otáčení/stisku enkodéru a tlačítka displeje. |
+| `display_task` | `uasyncio` úloha | `200 ms` | Překreslování OLED displeje (měření / nastavení). |
+| `control_task` | `uasyncio` úloha | `500 ms` | Vyhodnocení limitů, spínání ventilátoru a barva RGB LED. |
+| `sensor_task` | `uasyncio` úloha | `2000 ms` | Čtení dat z BME280 a senzoru vlhkosti půdy. |
+
 ## Použité knihovny
 
 | Knihovna / Modul | Zdroj |
